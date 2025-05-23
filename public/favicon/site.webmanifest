@@ -1,7 +1,12 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Matija Sabolić",
+    "short_name": "Sabo",
     "icons": [
+        {
+            "src": "/favicon/android-chrome-192x192.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
         {
             "src": "/favicon/android-chrome-192x192.png",
             "sizes": "192x192",
