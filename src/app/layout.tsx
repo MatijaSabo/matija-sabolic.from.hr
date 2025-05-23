@@ -10,8 +10,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `Next.js Blog Example with ${CMS_NAME}`,
-  description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
+  title: `Matija Sabolić`,
+  description: `Matija Sabolić - Experienced Adobe Experience Manager engineer`,
   openGraph: {
     images: [HOME_OG_IMAGE_URL],
   },
@@ -60,7 +60,6 @@ export default function RootLayout({
       <body
         className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
       >
-        <ThemeSwitcher />
         <div className="min-h-screen">{children}</div>
         <Footer />
       </body>
