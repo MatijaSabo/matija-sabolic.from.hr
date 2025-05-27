@@ -55,6 +55,7 @@ export default function RootLayout({
           content="/favicon/browserconfig.xml"
         />
         <meta name="theme-color" content="#000" />
+        <meta name="google-site-verification" content="xj8iIPSQWG45BJAvGftVUREf4DKhQ3n7JZpQ11mH5TA" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body
