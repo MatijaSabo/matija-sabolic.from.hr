@@ -8,6 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
+    host: 'https://matija-sabolic.from.hr',
     sitemap: 'https://matija-sabolic.from.hr/sitemap.xml',
   }
 }
