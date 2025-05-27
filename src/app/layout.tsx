@@ -56,6 +56,7 @@ export default function RootLayout({
         />
         <meta name="theme-color" content="#000" />
         <meta name="google-site-verification" content="xj8iIPSQWG45BJAvGftVUREf4DKhQ3n7JZpQ11mH5TA" />
+        <link rel="preload" href="https://www.googletagmanager.com/gtm.js?id=GTM-WK6WPRPG" as="script"></link>
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body
@@ -63,6 +64,7 @@ export default function RootLayout({
       >
         <div className="min-h-screen">{children}</div>
         <Footer />
+        <script src="https://www.googletagmanager.com/gtm.js?id=GTM-WK6WPRPG" id="_next-gtm" data-ntpc="GTM" data-nscript="afterInteractive"></script>
       </body>
     </html>
   );
