@@ -1,5 +1,4 @@
 import Footer from "@/app/_components/footer";
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import cn from "classnames";
@@ -11,13 +10,18 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://matija-sabolic.from.hr'),
-  title: `Matija Sabolić`,
-  description: `Matija Sabolić - Experienced Adobe Experience Manager engineer`,
+  title: 'Matija Sabolić',
+  description: 'Matija Sabolić - Experienced Adobe Experience Manager engineer',
+  verification: {
+    google: 'xj8iIPSQWG45BJAvGftVUREf4DKhQ3n7JZpQ11mH5TA'
+  }, 
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    images: [HOME_OG_IMAGE_URL],
+    type: 'website',
+    url: 'https://matija-sabolic.from.hr',
+    images: '/assets/blog/authors/og_image.png',
   },
 };
 
@@ -59,7 +63,6 @@ export default function RootLayout({
           content="/favicon/browserconfig.xml"
         />
         <meta name="theme-color" content="#000" />
-        <meta name="google-site-verification" content="xj8iIPSQWG45BJAvGftVUREf4DKhQ3n7JZpQ11mH5TA" />
         <link rel="preload" href="https://www.googletagmanager.com/gtm.js?id=GTM-WK6WPRPG" as="script"></link>
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
