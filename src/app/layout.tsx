@@ -10,8 +10,12 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://matija-sabolic.from.hr'),
   title: `Matija Sabolić`,
   description: `Matija Sabolić - Experienced Adobe Experience Manager engineer`,
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     images: [HOME_OG_IMAGE_URL],
   },
