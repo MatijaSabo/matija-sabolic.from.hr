@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --beige-light: #fffcf2;
+    --beige-dark: #ccc5b9;
+    --brown: #403d39;
+    --charcoral: #252422;
+    --orange: #eb5e28;
+}
+
+body {
+    background-color: var(--beige-light);
+}
