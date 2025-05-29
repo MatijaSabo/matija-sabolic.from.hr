@@ -10,6 +10,20 @@
     --orange: #eb5e28;
 }
 
+.section-beige {
+    background-color: var(--beige-dark);
+}
+
+.section-beige-light {
+    background-color: var(--beige-light);
+    border-color: var(--charcoral);
+
+    &:hover {
+        background-color: var(--orange);
+        transition: background-color 250ms linear;
+    }
+}
+
 body {
     background-color: var(--beige-light);
 }
