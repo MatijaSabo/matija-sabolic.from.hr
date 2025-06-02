@@ -7,7 +7,7 @@ export default function BackToTop() {
 
   const handleScroll = () => {
     if (
-      window.pageYOffset > 300
+      window.pageYOffset > 500
     ) {
       setShowButton(true);
     } else {
