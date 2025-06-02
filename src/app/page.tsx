@@ -109,19 +109,41 @@ export default function Index() {
           <div className="grid gap-8 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
             <Card
               title="Luxury vehicle coorporation"
-              description="Migration of multi-tenant websites and other systems into a new platform based on Adobe Experience Manager (6.5, AMS) and other Adobe Cloud products for Luxury vehicles corporation from North America."
+              description="
+              <ul class='ml-4 list-disc'>
+                <li>Migration of multi-tenant websites and other systems into a new platform based on Adobe Experience Manager (6.5, AMS) and other Adobe Cloud products for Luxury vehicles corporation from North America.</li>
+                <li>Leading implementation for vehicle pricing calculator based on revese engineered solution from legacy system</li>
+              </ul>
+              "
             />
             <Card
               title="Fashion industry"
-              description="For a global fashion and design company from Sweden, I have implemented features for their main website and features for push mobile notification campaigns. Migrated multi-module projects from AEM 6.1 to 6.4 (on-premise). Relaunched the new CI/CD deployment processes."
+              description="
+              <ul class='ml-4 list-disc'>
+                <li>Implementation of features for website & features for email marketing campaings & push notifications for global fashion and design company from Sweeded.</li>
+                <li>Migration of multi-module projects from AEM 6.1 to 6.4 (on-premise)</li>
+                <li>Implementing multi-tenant & multi-language solution in AEMaaCS</li>
+                <li>Implementing custom solution for translation management</li>
+              </ul>
+              "
             />
             <Card 
               title="Private University"
-              description="Lead the development team and mentored the next-gen Architect in the migration of multi-tenant websites to AEMaaCS for the largest private University in Germany. Websites based on Content Fragments, GraphQL, React, and Dynamic Media."
+              description="
+              <ul class='ml-4 list-disc'>
+                <li>Lead the development of multi-tenant websites to AEMaaCS for the largest private University in Germany.</li>
+                <li>Websites based on Content Fragments, GraphQL, React, and Dynamic Media.</li>
+              </ul>
+              "
             />
             <Card 
               title="European airline company"
-              description="Lead the development team and mentored the next-gen Architect in the migration of multi-tenant websites to AEMaaCS for the largest private University in Germany. Websites based on Content Fragments, GraphQL, React, and Dynamic Media."
+              description="
+              <ul class='ml-4 list-disc'>
+                <li>Lead the development of the multi-language blog post websites for the Europiean airline company.</li>
+                <li>Websites based on Content Fragments & Core components.</li>
+              </ul>
+              "
             />
           </div>
         </Section>
