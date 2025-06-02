@@ -4,6 +4,7 @@ import { Hero } from "./_components/hero";
 import Section from "./_components/section";
 import { Card } from "./_components/card";
 import { Timeline } from "./_components/timeline";
+import BackToTop from "./_components/back-to-top";
 
 export default function Index() {
   return (
@@ -25,19 +26,47 @@ export default function Index() {
           <div className="grid gap-8 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
             <Card
               title="Adobe Experience Manager"
-              description="Migration of multi-tenant websites and other systems into a new platform based on Adobe Experience Manager (6.5, AMS) and other Adobe Cloud products for Luxury vehicles corporation from North America."
+              description="
+                <ul>
+                  <li>AEMaaCS, AEM On-prem</li>
+                  <li>Multi-tenants, MSM</li>
+                  <li>Relaunches, Migrations</li>
+                  <li>Experience & Content Fragments</li>
+                  <li>Dynamic media, GraphQL</li>
+                  <li>Core Components</li>
+                  <li>AEM Mocks</li>
+                  <li>Dispatcher, SSI/ESI, CDN</li>
+                  <li>Performance, Caching, Security</li>
+                  <li>High Code Quality and Code Coverage</li>
+                </ul>
+              "
             />
             <Card
               title="Frontend Development"
-              description="For a global fashion and design company from Sweden, I have implemented features for their main website and features for push mobile notification campaigns. Migrated multi-module projects from AEM 6.1 to 6.4 (on-premise). Relaunched the new CI/CD deployment processes."
+              description="
+                <ul>
+                  <li>JavaScript, TypeScript, jQuery</li>
+                  <li>NodeJs, NextJs</li>
+                  <li>React</li>
+                  <li>Html, CSS</li>
+                </ul>
+              "
             />
             <Card 
-              title="Private University"
-              description="Lead the development team and mentored the next-gen Architect in the migration of multi-tenant websites to AEMaaCS for the largest private University in Germany. Websites based on Content Fragments, GraphQL, React, and Dynamic Media."
-            />
-            <Card 
-              title="European airline company"
-              description="Lead the development team and mentored the next-gen Architect in the migration of multi-tenant websites to AEMaaCS for the largest private University in Germany. Websites based on Content Fragments, GraphQL, React, and Dynamic Media."
+              title="Other skills"
+              description="
+                <ul>
+                  <li>Java Development</li>
+                  <li>Web Development</li>
+                  <li>SQL, MySql, PostgresSQL</li>
+                  <li>Unit & Integration testing</li>
+                  <li>Software Architeture</li>
+                  <li>Software Craftmenship</li>
+                  <li>Problem solving</li>
+                  <li>Reverse engineering</li>
+                  <li>Mentoring</li>
+                </ul>
+              "
             />
           </div>
         </div>
@@ -67,6 +96,7 @@ export default function Index() {
           </div>
         </Section>
       </Container>
+      <BackToTop />
     </main>
   );
 }
