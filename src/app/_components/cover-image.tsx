@@ -15,9 +15,6 @@ const CoverImage = ({ title, src, slug, width, height }: Props) => {
     <Image
       src={src}
       alt={title}
-      /*className={cn("shadow-sm w-full", {
-        "hover:shadow-lg transition-shadow duration-200": slug,
-      })}*/
       className="aspect-2/3 w-full"
       width={width ? width : 1300}
       height={height ? height : 630}
