@@ -1,5 +1,6 @@
 
 import type { MetadataRoute } from 'next'
+import about from "../../public/data/about.json"
  
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -8,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    host: 'https://matija-sabolic.from.hr',
-    sitemap: 'https://matija-sabolic.from.hr/sitemap.xml',
+    host: about.websiteUrl,
+    sitemap: `${about.websiteUrl}/sitemap.xml`,
   }
 }

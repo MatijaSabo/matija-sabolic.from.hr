@@ -2,16 +2,16 @@ import Footer from "@/app/_components/footer";
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import cn from "classnames";
-import { ThemeSwitcher } from "./_components/theme-switcher";
+import about from "../../public/data/about.json"
 
 import "./globals.css";
 
 const inter = JetBrains_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://matija-sabolic.from.hr'),
-  title: 'Matija Sabolić',
-  description: 'Matija Sabolić - Experienced Adobe Experience Manager engineer',
+  metadataBase: new URL(about.websiteUrl),
+  title: about.name,
+  description: about.role,
   verification: {
     google: 'xj8iIPSQWG45BJAvGftVUREf4DKhQ3n7JZpQ11mH5TA'
   }, 
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    url: 'https://matija-sabolic.from.hr',
+    url: about.websiteUrl,
     images: '/assets/blog/authors/og_image.png',
   },
 };

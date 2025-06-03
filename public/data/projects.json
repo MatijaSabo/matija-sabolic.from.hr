@@ -1,0 +1,36 @@
+[
+    {
+        "client": "Luxury vehicle coorporation",
+        "role": "Lead AEM Developer",
+        "responsabilities": [
+            "Migration of multi-tenant websites and other systems into a new platform based on Adobe Experience Manager (6.5, AMS) and other Adobe Cloud products for Luxury vehicles corporation from North America.",
+            "Leading implementation for vehicle pricing calculator based on revese engineered solution from legacy system"
+        ]
+    },
+    {
+        "client": "Fashion industry",
+        "role": "Lead AEM Developer",
+        "responsabilities": [
+            "Implementation of features for website & features for email marketing campaings & push notifications for global fashion and design company from Sweeded.",
+            "Migration of multi-module projects from AEM 6.1 to 6.4 (on-premise)",
+            "Implementing multi-tenant & multi-language solution in AEMaaCS",
+            "Implementing custom solution for translation management"
+        ]
+    },
+    {
+        "client": "Private University",
+        "role": "Lead AEM Developer",
+        "responsabilities": [
+            "Lead the development of multi-tenant websites to AEMaaCS for the largest private University in Germany.",
+            "Websites based on Content Fragments, GraphQL, React, and Dynamic Media."
+        ]
+    },
+    {
+        "client": "European airline company",
+        "role": "Lead AEM Developer",
+        "responsabilities": [
+            "Lead the development of the multi-language blog post websites for the Europiean airline company.",
+            "Websites based on Content Fragments & Core components."
+        ]
+    }
+]

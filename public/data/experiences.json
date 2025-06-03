@@ -1,0 +1,57 @@
+[
+    {
+        "startDate": "May 2023",
+        "endDate": "",
+        "role": "Technical Arhitect & Senior Software Engineer",
+        "company": "IBM iX",
+        "responsabilities": [
+            "Defining the architecture and concepts of the solution",
+            "Resolving unresolvable challenges",
+            "Providing technical guidance and serving as the main contact for inquiries",
+            "Supporting presales with development of RFPs"
+        ] 
+    },
+    {
+        "startDate": "April 2022",
+        "endDate": "May 2023",
+        "role": "Lead Developer",
+        "company": "IBM iX",
+        "responsabilities": [
+            "Leading development by following the best practices",
+            "Leading unit and integration testing for quality accurance",
+            "Supporting tehnical arhitect with concepts of the solution",
+            "Transforming complex requirements into maintainable, high-performance code"
+        ] 
+    },
+    {
+        "startDate": "July 2020",
+        "endDate": "April 2022",
+        "role": "Profesional Developer",
+        "company": "IBM iX",
+        "responsabilities": [
+            "Coaching and guiding the team and colleagues",
+            "Providing mentorship and training for Java and AEM developers",
+            "Implementing unit and integration testing for quality assurance"
+        ] 
+    },
+    {
+        "startDate": "May 2018",
+        "endDate": "July 2020",
+        "role": "Java Web Developer",
+        "company": "IBM iX",
+        "responsabilities": [
+            "Implementing Enterprise CMS solutions with Adobe Experience Manager(AEM) 6.5 and AEM as a Cloud Service",
+            "Active peer code review on Azure, GitHub and Bitbucket on projects for insurance of code quality and for following coding guidelines",
+            "Working in international Scrum teams developing web solutions for top European brands"
+        ] 
+    },
+    {
+        "startDate": "April 2018",
+        "endDate": "May 2018",
+        "role": "Internship",
+        "company": "IBM iX",
+        "responsabilities": [
+            "Working on internal starter project developing web components in Adobe Experience Manager"
+        ]
+    }
+]

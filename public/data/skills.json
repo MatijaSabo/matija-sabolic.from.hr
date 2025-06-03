@@ -1,0 +1,40 @@
+[
+    {
+        "area": "Adobe Experience Manager",
+        "skills": [
+            "AEMaaCS, AEM On-prem",
+            "Multi-tenants, MSM",
+            "Relaunches, Migrations",
+            "Experience & Content Fragments",
+            "Dynamic media, GraphQL",
+            "Core Components",
+            "AEM Mocks",
+            "Dispatcher, SSI/ESI, CDN",
+            "Performance, Caching, Security",
+            "High Code Quality and Code Coverage"
+        ]
+    },
+    {
+        "area": "Frontend Development",
+        "skills": [
+            "JavaScript, TypeScript, jQuery",
+            "NodeJs, NextJs",
+            "React",
+            "Html, CSS"
+        ]
+    },
+    {
+        "area": "Other skills",
+        "skills": [
+            "Java Development",
+            "Web Development",
+            "SQL, MySql, PostgresSQL",
+            "Unit & Integration testing",
+            "Software Architeture",
+            "Software Craftmenship",
+            "Problem solving",
+            "Reverse engineering",
+            "Mentoring"
+        ]
+    }
+]
