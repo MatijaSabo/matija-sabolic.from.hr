@@ -6,6 +6,7 @@ import About from "./_components/about";
 import Skills from "./_components/skills";
 import Projects from "./_components/projects";
 import Qualifications from "./_components/qualifications";
+import Testimonial from "./_components/testimonial";
 
 export default function Index() {
   return (
@@ -17,6 +18,7 @@ export default function Index() {
         <Qualifications />
         <Timeline />
         <Projects />
+        <Testimonial />
       </Container>
       <BackToTop />
     </main>
