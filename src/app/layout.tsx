@@ -10,7 +10,7 @@ const inter = JetBrains_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(about.websiteUrl),
-  title: about.name,
+  title: about.name + " - " + about.role,
   description: about.role,
   verification: {
     google: 'xj8iIPSQWG45BJAvGftVUREf4DKhQ3n7JZpQ11mH5TA'
