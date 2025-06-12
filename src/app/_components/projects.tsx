@@ -1,6 +1,6 @@
-import { Card } from "./card";
-import Section from "./section";
-import data from "../../../public/data/projects.json";
+import { Card } from "@/components/card";
+import Section from "@/components/section";
+import data from "@/dam/data/projects.json";
 
 export default function Projects() {
     

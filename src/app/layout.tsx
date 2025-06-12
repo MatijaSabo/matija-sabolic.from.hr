@@ -1,8 +1,10 @@
-import Footer from "@/app/_components/footer";
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import cn from "classnames";
-import about from "../../public/data/about.json"
+
+import Footer from "@/components/footer";
+import BackToTop from "@/components/back-to-top";
+import about from "@/dam/data/about.json"
 
 import "./globals.css";
 
@@ -71,6 +73,7 @@ export default function RootLayout({
       >
         <div className="min-h-screen">{children}</div>
         <Footer />
+        <BackToTop />
         <script src="https://www.googletagmanager.com/gtm.js?id=GTM-WK6WPRPG" id="_next-gtm" data-ntpc="GTM" data-nscript="afterInteractive"></script>
       </body>
     </html>

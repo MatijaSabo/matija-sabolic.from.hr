@@ -4,9 +4,9 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import { Quote } from "./quote";
-import data from "../../../public/data/feedbacks.json";
-import Section from "./section";
+import { Quote } from "@/components/quote";
+import Section from "@/components/section";
+import data from "@/dam/data/feedbacks.json";
 
 const responsive = {
   desktop: {
@@ -46,7 +46,7 @@ export default function Testimonial() {
                 removeArrowOnDeviceType={["desktop","tablet", "mobile"]}
                 dotListClass="custom-dot-list-style"
             >
-                {data.map((item, key) => {
+                {data.filter((item) => !item.hidden).map((item, key) => {
                     return <Quote text={item.feedback} author={item.author} />
                 })}
             </Carousel>

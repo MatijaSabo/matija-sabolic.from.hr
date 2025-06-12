@@ -1,62 +1,77 @@
 [
     {
         "feedback": "Very focused on the client, often would offer an even better solution. He never left the conversation until everything was worked out in detail, so that client wouldn't be surprised or disappointed.",
-        "author": "AEM Developer"
+        "author": "AEM Developer",
+        "hidden": false
     },
     {
         "feedback": "Matija consistently demonstrates his reliability, especially when it's decision time or taking much harder challenges that may exceed the capabilities of others in team.",
-        "author":"Project manager"
+        "author":"Project manager",
+        "hidden": false
     },
     {
         "feedback": "It’s always nice to work with you and your opinion with strong technical background is very valuable to the team. The team can only appreciate it to have you as a part of the team.",
-        "author": "Project manager"
+        "author": "Project manager",
+        "hidden": false
     },
     {
         "feedback": "On daily basis, how much, how fast, and how quality-wise you deliver, it's amazing. Keep doing a great job. It's clearly visible that you are very eager and motivated, and this will definitely push you to the next project roles.",
-        "author": "AEM Architect"
+        "author": "AEM Architect",
+        "hidden": false
     },
     {
         "feedback": "Matija has proven his deep engineering understanding by reverse engineering old pseudocode and developing reusable and performance efficient solution",
-        "author": "Project manager"
+        "author": "Project manager",
+        "hidden": false
     },
     {
         "feedback": "Keep up the great work!! I'm glad I've had an opportunity to work with you and learn so much. It was a pleasure working with you.",
-        "author": "AEM Developer"
+        "author": "AEM Developer",
+        "hidden": false
     },
     {
         "feedback": "It was an absolute pleasure to work with you, and I am beyond amazed for what you did on the project (given the lack of requirements), and how you handled it.",
-        "author": "Project manager"
+        "author": "Project manager",
+        "hidden": false
     },
     {
         "feedback": "When implementing solutions, you always think ahead, how to improve the overall feature so it can easily be reused or refactored for some future changes.",
-        "author": "AEM Architect"
+        "author": "AEM Architect",
+        "hidden": false
     },
     {
         "feedback": "You take ownership of your topics and drive them to completion - not every (even senior) Dev does this. This is a super important and extremely highly valued skill.",
-        "author": "Project manager"
+        "author": "Project manager",
+        "hidden": false
     },
     {
         "feedback": "Beyond your technical contributions, your positive attitude provided great moral support to the team. You truly stood out as one of the shining stars, playing a key role in both the developmentand successful delivery of the project.",
-        "author":"Project manager"
+        "author":"Project manager",
+        "hidden": false
     },
     {
         "feedback": "You're a truly solution-oriented developer, and you did an outstanding job implementing the API over pseudocode, even without clear requirements from the client, something not many could havehandled as efectively.",
-        "author": "FE Developer"
+        "author": "FE Developer",
+        "hidden": false
     },
     {
         "feedback": "Your flexibility in switching from back-end to front-end work, especially to support the FE application, was incredibly valuable.",
-        "author": "FE Architect"
+        "author": "FE Architect",
+        "hidden": false
     },
     {
         "feedback": "It’s been absolutely wonderful working with Matija on this project. His technical  expertise, proactive attitude, and consistent reliability have made a huge difference in our success. He’s not only great at solving complex problems quickly but also communicates clearly and works seamlessly with the entire team. A truly valuable asset to the project and a pleasure to work with!",
-        "author": "Project manager"
+        "author": "Project manager",
+        "hidden": false
     },
     {
         "feedback": "Working with Matija has been an exceptional experience. As a key development resource on our team, he consistently exceeded expectations, delivered high-quality work on time, and brought a proactive mindset to everything he does.",
-        "author": "Project manager"
+        "author": "Project manager",
+        "hidden": false
     },
     {
         "feedback": "What also sets Matija apart is his ability to communicate technical issues in a clear, approachable way. He has a talent for distilling technical challenges so that non-technical team members can understand the impact, the approach, and the solution. This skill has been invaluable in helping me have a better understanding of AEM as a platform, and how it has been built for our use. This is my first experience with AEM and I truly would not have the knowledge of the ins & outs of our platform without Matija's support and guidance.",
-        "author": "Client"
+        "author": "Client",
+        "hidden": true
     }
 ]

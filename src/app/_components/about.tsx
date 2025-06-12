@@ -1,5 +1,5 @@
-import { Hero } from "./hero";
-import data from "../../../public/data/about.json";
+import { Hero } from "@/components/hero";
+import data from "@/dam/data/about.json";
 
 export default function About() {
 

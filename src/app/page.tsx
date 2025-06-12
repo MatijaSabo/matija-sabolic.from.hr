@@ -1,12 +1,11 @@
-import Container from "@/app/_components/container";
-import { Intro } from "@/app/_components/intro";
-import { Timeline } from "./_components/timeline";
-import BackToTop from "./_components/back-to-top";
-import About from "./_components/about";
-import Skills from "./_components/skills";
-import Projects from "./_components/projects";
-import Qualifications from "./_components/qualifications";
-import Testimonial from "./_components/testimonial";
+import Container from "@/components/container";
+import { Intro } from "@/components/intro";
+import { Timeline } from "@/components/timeline";
+import About from "@/components/about";
+import Skills from "@/components/skills";
+import Projects from "@/components/projects";
+import Qualifications from "@/components/qualifications";
+import Testimonial from "@/components/testimonial";
 
 export default function Index() {
   return (
@@ -20,7 +19,6 @@ export default function Index() {
         <Projects />
         <Testimonial />
       </Container>
-      <BackToTop />
     </main>
   );
 }

@@ -1,5 +1,6 @@
-import Container from "@/app/_components/container";
 import cn from "classnames";
+
+import Container from "@/components/container";
 
 type Props = {
   preview?: boolean;
