@@ -10,7 +10,7 @@ import "./globals.css";
 
 const inter = JetBrains_Mono({ subsets: ["latin"] });
 
-export const jsonLd = {
+const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: about.name,
