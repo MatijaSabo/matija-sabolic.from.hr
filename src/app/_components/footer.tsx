@@ -1,4 +1,5 @@
 import Container from "@/components/container";
+import about from "@/dam/data/about.json"
 
 export function Footer() {
   return (
@@ -10,18 +11,18 @@ export function Footer() {
           </h2>
           <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
             <a
-              href="mailto:matijasaboli37@gmail.com"
+              href={`mailto:${about.email}`}
               className="mx-3 font-bold hover:underline">
               Email
             </a>
             <a
-              href="/LinkedIn"
+              href={about.socialMedia.LinkedIn}
               target="_blank"
               className="mx-3 font-bold hover:underline">
               LinkedIn
             </a>
             <a
-              href="/GitHub"
+              href={about.socialMedia.GitHub}
               target="_blank"
               className="mx-3 font-bold hover:underline"
             >

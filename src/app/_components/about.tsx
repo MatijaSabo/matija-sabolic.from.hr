@@ -15,7 +15,7 @@ export default function About() {
 
     return (
         <Hero 
-            title={data.role}
+            title={data.role.name}
             bio={bio()}
             coverImage={data.picture}
             alt={data.name}
