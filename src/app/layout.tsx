@@ -10,10 +10,24 @@ import "./globals.css";
 
 const inter = JetBrains_Mono({ subsets: ["latin"] });
 
+export const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: about.name,
+  image: about.picture,
+  description: about.description,
+  sameAs: [
+    about.websiteUrl,
+    about.socialMedia.LinkedIn,
+    about.socialMedia.GitHub
+  ],
+  jobTitle: about.role.name
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL(about.websiteUrl),
-  title: about.name + " - " + about.role,
-  description: about.role,
+  title: about.name + " - " + about.role.shortName,
+  description: about.description,
   verification: {
     google: 'xj8iIPSQWG45BJAvGftVUREf4DKhQ3n7JZpQ11mH5TA'
   }, 
@@ -67,6 +81,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#000" />
         <link rel="preload" href="https://www.googletagmanager.com/gtm.js?id=GTM-WK6WPRPG" as="script"></link>
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'), }}/>
       </head>
       <body
         className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
