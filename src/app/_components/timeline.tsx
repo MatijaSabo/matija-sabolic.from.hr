@@ -1,4 +1,4 @@
-import data from "../../../public/data/experiences.json";
+import data from "@/dam/data/experiences.json";
 
 export function Timeline() {
     return (

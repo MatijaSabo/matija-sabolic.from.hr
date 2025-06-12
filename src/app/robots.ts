@@ -1,6 +1,7 @@
 
 import type { MetadataRoute } from 'next'
-import about from "../../public/data/about.json"
+
+import about from "@/dam/data/about.json"
  
 export default function robots(): MetadataRoute.Robots {
   return {

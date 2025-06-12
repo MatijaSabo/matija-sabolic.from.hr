@@ -1,4 +1,4 @@
-import data from "../../../public/data/about.json"
+import data from "@/dam/data/about.json"
 
 export function Intro() {
   return (

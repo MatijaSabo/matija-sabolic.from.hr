@@ -1,4 +1,4 @@
-import CoverImage from "@/app/_components/cover-image";
+import CoverImage from "@/components/cover-image";
 
 type Props = {
   title: string;

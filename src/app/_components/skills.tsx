@@ -1,5 +1,5 @@
-import { Card } from "./card";
-import data from "../../../public/data/skills.json";
+import { Card } from "@/components/card";
+import data from "@/dam/data/skills.json";
 
 export default function Skills() {
 
