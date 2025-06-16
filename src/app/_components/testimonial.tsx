@@ -1,12 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+import { getFeedbacks } from "@/api/feedbacks/api";
 import { Quote } from "@/components/quote";
 import Section from "@/components/section";
-import data from "@/dam/data/feedbacks.json";
 
 const responsive = {
   desktop: {
@@ -27,6 +27,13 @@ const responsive = {
 };
 
 export default function Testimonial() {
+    const [data, setData] = useState<Feedback[]>([]);
+
+    useEffect(() => {
+      getFeedbacks()
+        .then((data) => setData(data))
+        .catch((error) => console.error('There was a problem with the fetch operation:', error));
+    }, []);
 
     return (
         <Section>
@@ -47,7 +54,7 @@ export default function Testimonial() {
                 dotListClass="custom-dot-list-style"
             >
                 {data.filter((item) => !item.hidden).map((item, key) => {
-                    return <Quote text={item.feedback} author={item.author} />
+                    return <Quote text={item.message} author={item.author || ""} />
                 })}
             </Carousel>
         </Section>
