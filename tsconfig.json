@@ -22,6 +22,7 @@
       "@/dam/*": ["../public/*"],
       "@/posts/*": ["../_posts/*"],
       "@/components/*": ["app/_components/*"],
+      "@/api/*": ["integrations/*"],
     },
     "target": "ES2017"
   },
