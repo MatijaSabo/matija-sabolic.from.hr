@@ -23,6 +23,6 @@ export const list_styling = {
 
 export const list_styling_light_margin = {
   renderNode: {
-    [BLOCKS.UL_LIST]: (node: { content: any; }, next: (arg0: any) => any) => `<ul class='ml-4 list-disc'>${next(node.content)}</ul>`
+    [BLOCKS.UL_LIST]: (node: { content: any; }, next: (arg0: any) => any) => `<ul class='ml-6 list-disc'>${next(node.content)}</ul>`
   }
 }
