@@ -1,24 +1,18 @@
 import { Hero } from "@/components/hero";
-import data from "@/dam/data/about.json";
 
-export default function About() {
+type Props = {
+    title: string
+    description: string
+    image: Picture
+}
 
-    function bio() {
-        let bio = "";
-        
-        data.about.forEach((element) => {
-            bio += `<p class='pt-4'>${element}</p>`
-        })
-
-        return bio;
-    }
-
+export default function About({ title, description, image}: Props) {
     return (
         <Hero 
-            title={data.role.name}
-            bio={bio()}
-            coverImage={data.picture}
-            alt={data.name}
+            title={title}
+            bio={description}
+            coverImage={image.url}
+            alt={image.description}
         />
     )
 }

@@ -4,9 +4,12 @@ import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import { getFeedbacks } from "@/api/feedbacks/api";
 import { Quote } from "@/components/quote";
 import Section from "@/components/section";
+
+type Props = {
+  feedbacks: Feedback[];
+}
 
 const responsive = {
   desktop: {
@@ -26,15 +29,7 @@ const responsive = {
   }
 };
 
-export default function Testimonial() {
-    const [data, setData] = useState<Feedback[]>([]);
-
-    useEffect(() => {
-      getFeedbacks()
-        .then((data) => setData(data))
-        .catch((error) => console.error('There was a problem with the fetch operation:', error));
-    }, []);
-
+export default function Testimonial({ feedbacks }: Props) {
     return (
         <Section>
             <h2 className="text-2xl xl:text-4xl font-bold tracking-tighter md:pr-8 pb-6 xl:pb-8">Feedback matters</h2>
@@ -53,7 +48,7 @@ export default function Testimonial() {
                 removeArrowOnDeviceType={["desktop","tablet", "mobile"]}
                 dotListClass="custom-dot-list-style"
             >
-                {data.filter((item) => !item.hidden).map((item, key) => {
+                {feedbacks.filter((item) => !item.hidden).map((item, key) => {
                     return <Quote text={item.message} author={item.author || ""} />
                 })}
             </Carousel>
