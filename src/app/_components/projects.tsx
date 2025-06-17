@@ -1,30 +1,24 @@
-import { Card } from "@/components/card";
 import Section from "@/components/section";
-import data from "@/dam/data/projects.json";
+import ProjectItem from "./project";
 
-export default function Projects() {
-    
-    function formatResponsabilities(responsabilities: string[]) {
-        let bio = "<ul class='ml-4 list-disc'>";
-        
-        responsabilities.forEach((element) => {
-            bio += `<li>${element}</li>`
-        })
+type Props = {
+    projects: Project[]
+}
 
-        bio += "</ul>"
-        return bio;
-    }
-    
+export default function Projects({ projects }: Props) {
     return (
         <Section>
           <h2 className="text-2xl xl:text-4xl font-bold tracking-tighter md:pr-8 pb-6 xl:pb-8">Projects</h2>
           <p className="text-base xl:text-xl tracking-tighter md:pr-8 pb-8">Some highlight projects on which I worked on</p>
           <div className="grid gap-8 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
-            {data.map((item, key) => {
-                return <Card
-                    title={item.client}
-                    description={formatResponsabilities(item.responsabilities)}
-                />
+            {projects.map((item, key) => {
+                return (
+                    <ProjectItem 
+                        client={item.client} 
+                        role={item.role}
+                        responsibilities={item.responsibilities} 
+                    />
+                )
             })}
           </div>
         </Section>

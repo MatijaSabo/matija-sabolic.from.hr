@@ -6,19 +6,51 @@ import Skills from "@/components/skills";
 import Projects from "@/components/projects";
 import Qualifications from "@/components/qualifications";
 import Testimonial from "@/components/testimonial";
+import Footer from "@/components/footer";
+import BackToTop from "@/components/back-to-top";
 
-export default function Index() {
+import { getAuthorById } from "@/api/author/api";
+import { getFeedbacks } from "@/api/feedbacks/api";
+import richTextToHtml, { paragraph_styling } from "@/api/author/richTextToHtml";
+
+export default async function Index() {
+  const author: ContentfulAuthor = await getAuthorById(process.env.CONTENTFUL_ENTITY_ID as string);
+  const feedbacks: Feedback[] = await getFeedbacks();
+
   return (
-    <main>
+    <>
+      <main>
       <Container>
-        <Intro />
-        <About />
-        <Skills />
-        <Qualifications />
-        <Timeline />
-        <Projects />
-        <Testimonial />
+        <Intro 
+          title={author.name} 
+        />
+        <About 
+          title={author.jobsCollection.items[0].role} 
+          description={await richTextToHtml(author.bio, paragraph_styling)} 
+          image={author.picture} />
+        <Skills 
+          items={author.skillsCollection.items}
+        />
+        <Qualifications 
+          education={author.education}
+          certificates={author.certificatesCollection.items}
+        />
+        <Timeline 
+          jobs={author.jobsCollection.items}
+        />
+        <Projects 
+          projects={author.projectsCollection.items}
+        />
+        <Testimonial 
+          feedbacks={feedbacks}
+        />
       </Container>
-    </main>
+      </main>
+      <Footer 
+        links={author.socialMedia}
+        email={author.email}
+      />
+      <BackToTop />
+    </>
   );
 }

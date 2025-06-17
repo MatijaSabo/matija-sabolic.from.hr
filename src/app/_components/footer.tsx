@@ -1,7 +1,11 @@
 import Container from "@/components/container";
-import about from "@/dam/data/about.json"
 
-export function Footer() {
+type Props = {
+  links: SocialMediaLinks
+  email: string
+}
+
+export function Footer({ links, email }: Props) {
   return (
     <footer>
       <Container>
@@ -11,18 +15,18 @@ export function Footer() {
           </h2>
           <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
             <a
-              href={`mailto:${about.email}`}
+              href={`mailto:${email}`}
               className="mx-3 font-bold hover:underline">
               Email
             </a>
             <a
-              href={about.socialMedia.LinkedIn}
+              href={links.linkedIn}
               target="_blank"
               className="mx-3 font-bold hover:underline">
               LinkedIn
             </a>
             <a
-              href={about.socialMedia.GitHub}
+              href={links.gitHub}
               target="_blank"
               className="mx-3 font-bold hover:underline"
             >

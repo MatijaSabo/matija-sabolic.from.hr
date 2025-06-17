@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import cn from "classnames";
-
-import Footer from "@/components/footer";
-import BackToTop from "@/components/back-to-top";
 import about from "@/dam/data/about.json"
 
 import "./globals.css";
@@ -87,8 +84,6 @@ export default function RootLayout({
         className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
       >
         <div className="min-h-screen">{children}</div>
-        <Footer />
-        <BackToTop />
         <script src="https://www.googletagmanager.com/gtm.js?id=GTM-WK6WPRPG" id="_next-gtm" data-ntpc="GTM" data-nscript="afterInteractive"></script>
       </body>
     </html>
