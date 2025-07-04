@@ -8,7 +8,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: about.websiteUrl,
       lastModified: new Date(),
       changeFrequency: 'daily',
-      priority: 1,
+      priority: 0.7,
+    },
+    {
+      url: `${about.websiteUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.7,
     }
   ]
 }

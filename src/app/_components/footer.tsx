@@ -11,24 +11,24 @@ export function Footer({ links, email }: Props) {
       <Container>
         <div className="pt-28 pb-20 flex flex-col lg:flex-row items-center">
           <h2 className="text-2xl lg:text-4xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Contact me over
+            Let's get in touch
           </h2>
           <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
             <a
               href={`mailto:${email}`}
-              className="mx-3 font-bold hover:underline">
+              className="mx-3 font-bold hover:underline underline-offset-4">
               Email
             </a>
             <a
               href={links.linkedIn}
               target="_blank"
-              className="mx-3 font-bold hover:underline">
+              className="mx-3 font-bold hover:underline underline-offset-4">
               LinkedIn
             </a>
             <a
               href={links.gitHub}
               target="_blank"
-              className="mx-3 font-bold hover:underline"
+              className="mx-3 font-bold hover:underline underline-offset-4"
             >
               GitHub
             </a>
