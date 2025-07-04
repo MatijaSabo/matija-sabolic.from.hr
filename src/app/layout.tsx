@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
+import { Analytics } from '@vercel/analytics/next';
+
 import cn from "classnames";
 import about from "@/dam/data/about.json"
 
@@ -83,7 +85,10 @@ export default function RootLayout({
       <body
         className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
       >
-        <div className="min-h-screen">{children}</div>
+        <div className="min-h-screen">
+          {children}
+          <Analytics />
+          </div>
         <script src="https://www.googletagmanager.com/gtm.js?id=GTM-WK6WPRPG" id="_next-gtm" data-ntpc="GTM" data-nscript="afterInteractive"></script>
       </body>
     </html>

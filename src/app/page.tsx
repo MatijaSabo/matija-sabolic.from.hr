@@ -20,31 +20,31 @@ export default async function Index() {
   return (
     <>
       <main>
-      <Container>
-        <Intro 
-          title={author.name} 
-        />
-        <About 
-          title={author.jobsCollection.items[0].role} 
-          description={await richTextToHtml(author.bio, paragraph_styling)} 
-          image={author.picture} />
-        <Skills 
-          items={author.skillsCollection.items}
-        />
-        <Qualifications 
-          education={author.education}
-          certificates={author.certificatesCollection.items}
-        />
-        <Timeline 
-          jobs={author.jobsCollection.items}
-        />
-        <Projects 
-          projects={author.projectsCollection.items}
-        />
-        <Testimonial 
-          feedbacks={feedbacks}
-        />
-      </Container>
+        <Container>
+          <Intro 
+            title={author.name} 
+          />
+          <About 
+            title={author.jobsCollection.items[0].role} 
+            description={await richTextToHtml(author.bio, paragraph_styling)} 
+            image={author.picture} />
+          <Skills 
+            items={author.skillsCollection.items}
+          />
+          <Qualifications 
+            education={author.education}
+            certificates={author.certificatesCollection.items}
+          />
+          <Timeline 
+            jobs={author.jobsCollection.items}
+          />
+          <Projects 
+            projects={author.projectsCollection.items}
+          />
+          <Testimonial 
+            feedbacks={feedbacks}
+          />
+        </Container>
       </main>
       <Footer 
         links={author.socialMedia}

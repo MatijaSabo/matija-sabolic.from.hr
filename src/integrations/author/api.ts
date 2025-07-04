@@ -70,7 +70,7 @@ export async function getAuthorById(id: string) : Promise<ContentfulAuthor> {
       `,
       variables: { id },
     }),
-    next: { revalidate: 30 },
+    next: { revalidate: Number(process.env.API_REFRESH_PERIOD) },
   });
 
   const json = await response.json();
