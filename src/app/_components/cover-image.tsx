@@ -14,6 +14,8 @@ const CoverImage = ({ title, src, slug, width, height }: Props) => {
     <Image
       src={src}
       alt={title}
+      loading="lazy"
+      fetchPriority="high"
       className="aspect-2/3 w-full"
       width={width ? width : 1300}
       height={height ? height : 630}
