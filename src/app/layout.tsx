@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import { Analytics } from '@vercel/analytics/next';
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 
 import cn from "classnames";
 import about from "@/dam/data/about.json"
@@ -78,7 +79,6 @@ export default function RootLayout({
           content="/favicon/browserconfig.xml"
         />
         <meta name="theme-color" content="#000" />
-        <link rel="preload" href="https://www.googletagmanager.com/gtm.js?id=GTM-WK6WPRPG" as="script"></link>
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'), }}/>
       </head>
@@ -87,9 +87,10 @@ export default function RootLayout({
       >
         <div className="min-h-screen">
           {children}
-          <Analytics />
-          </div>
-        <script src="https://www.googletagmanager.com/gtm.js?id=GTM-WK6WPRPG" id="_next-gtm" data-ntpc="GTM" data-nscript="afterInteractive"></script>
+        </div>
+        <Analytics />
+        <GoogleTagManager gtmId="GTM-WK6WPRPG" />
+        <GoogleAnalytics gaId="G-MQ4B4XVQBR" />
       </body>
     </html>
   );
