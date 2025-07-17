@@ -4,6 +4,13 @@ import Footer from "@/components/footer";
 import Container from "@/components/container";
 import { Intro } from "@/components/intro";
 import ContactForm from "@/components/contactForm";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/contact',
+  }
+};
 
 export default async function Contact() {
   const author: ContentfulAuthor = await getAuthorById(process.env.CONTENTFUL_ENTITY_ID as string);
