@@ -1,16 +1,22 @@
 
 import type { MetadataRoute } from 'next'
-
-import about from "@/dam/data/about.json"
+import { headers } from 'next/headers';
  
-export default function robots(): MetadataRoute.Robots {
+const robots = async(): Promise<MetadataRoute.Robots> => {
+  const headersList = await headers();
+  const host = headersList.get('host') ?? 'matija-sabolic.from.hr';
+  const protocol = headersList.get('x-forwarded-proto') ?? 'https';
+  const fullUrl = `${protocol}://${host}`;
+
   return {
     rules: {
       userAgent: '*',
       allow: '/',
       disallow: '/private/',
     },
-    host: about.websiteUrl,
-    sitemap: `${about.websiteUrl}/sitemap.xml`,
+    host: fullUrl,
+    sitemap: `${fullUrl}/sitemap.xml`,
   }
 }
+
+export default robots;

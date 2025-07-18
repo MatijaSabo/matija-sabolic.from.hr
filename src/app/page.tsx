@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import Container from "@/components/container";
 import { Intro } from "@/components/intro";
 import { Timeline } from "@/components/timeline";
