@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { JetBrains_Mono } from "next/font/google";
 import { Analytics } from '@vercel/analytics/next';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
@@ -24,19 +24,30 @@ const jsonLd = {
   jobTitle: about.role.name
 }
 
-export const metadata: Metadata = {
-  metadataBase: new URL(about.websiteUrl),
-  title: about.name + " - " + about.role.shortName,
-  description: about.description,
-  verification: {
-    google: 'xj8iIPSQWG45BJAvGftVUREf4DKhQ3n7JZpQ11mH5TA'
-  }, 
-  openGraph: {
-    type: 'website',
-    url: about.websiteUrl,
-    images: '/assets/blog/authors/og_image.png',
-  },
-};
+export const dynamic = 'force-dynamic';
+
+export async function generateMetadata() {
+  const headersList = await headers();
+  const host = headersList.get('host') ?? 'matija-sabolic.from.hr';
+  const protocol = headersList.get('x-forwarded-proto') ?? 'https';
+  const fullUrl = `${protocol}://${host}`;
+
+  return {
+    metadataBase: new URL(fullUrl),
+    title: {
+      template: '%s | Matija Sabolić',
+    },
+    description: about.description,
+    verification: {
+      google: 'xj8iIPSQWG45BJAvGftVUREf4DKhQ3n7JZpQ11mH5TA'
+    }, 
+    openGraph: {
+      type: 'website',
+      url: about.websiteUrl,
+      images: '/assets/blog/authors/og_image.png',
+    }
+  }
+}
 
 export default function RootLayout({
   children,

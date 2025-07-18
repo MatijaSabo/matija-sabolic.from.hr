@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import Container from "@/components/container";
 import { Intro } from "@/components/intro";
 import { Timeline } from "@/components/timeline";
@@ -14,11 +13,16 @@ import { getAuthorById } from "@/api/author/api";
 import { getFeedbacks } from "@/api/feedbacks/api";
 import richTextToHtml, { paragraph_styling } from "@/api/author/richTextToHtml";
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: '/',
+import about from "@/dam/data/about.json"
+
+export async function generateMetadata() {
+  return {
+    title: `${about.role.shortName} | ${about.name}`,
+    alternates: {
+      canonical: '/',
+    },
   }
-};
+}
 
 export default async function Index() {
   const author: ContentfulAuthor = await getAuthorById(process.env.CONTENTFUL_ENTITY_ID as string);
