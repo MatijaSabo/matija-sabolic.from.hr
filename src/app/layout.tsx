@@ -1,6 +1,7 @@
 import { headers } from "next/headers";
 import { JetBrains_Mono } from "next/font/google";
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 
 import cn from "classnames";
@@ -97,6 +98,7 @@ export default function RootLayout({
           {children}
         </div>
         <Analytics />
+        <SpeedInsights />
         <GoogleTagManager gtmId="GTM-WK6WPRPG" />
         <GoogleAnalytics gaId="G-MQ4B4XVQBR" />
       </body>
