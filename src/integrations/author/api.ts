@@ -1,13 +1,14 @@
-const TOKEN = process.env.CONTENTFUL_PREVIEW_API_KEY;
+const PREVIEW_TOKEN = process.env.CONTENTFUL_PREVIEW_API_KEY;
+const TOKEN = process.env.CONTENTFUL_DELIVERY_API_KEY;
 const SPACE = process.env.CONTENTFUL_SPACE;
 const URL = `https://graphql.contentful.com/content/v1/spaces/${SPACE}`;
 
-export async function getAuthorById(id: string) : Promise<ContentfulAuthor> {
+export async function getAuthorById(id: string, preview = false) : Promise<ContentfulAuthor> {
   const response  = await fetch(URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${TOKEN}`
+      'Authorization': `Bearer ${preview ? PREVIEW_TOKEN : TOKEN}`
     },
     body: JSON.stringify({
       query: `
@@ -70,7 +71,8 @@ export async function getAuthorById(id: string) : Promise<ContentfulAuthor> {
       `,
       variables: { id },
     }),
-    next: { revalidate: Number(process.env.API_REFRESH_PERIOD) },
+    next: { revalidate: preview ? 0 : Number(process.env.API_REFRESH_PERIOD) },
+    cache: preview ? 'no-store' : 'force-cache'
   });
 
   const json = await response.json();
