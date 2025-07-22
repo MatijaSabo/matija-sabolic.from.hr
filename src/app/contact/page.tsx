@@ -22,7 +22,7 @@ export default async function Contact() {
       <main>
         <Container>
           <Intro 
-            title={author.name} 
+            data={author} 
           />
           <ContactForm />
         </Container>

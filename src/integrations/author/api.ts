@@ -14,6 +14,10 @@ export async function getAuthorById(id: string, preview = false) : Promise<Conte
       query: `
         query GetAuthorById($id: String!) {
           author(id: $id) {
+            __typename
+            sys {
+              id
+            }
             name
             bio 
             description

@@ -27,6 +27,7 @@ export async function generateMetadata() {
 
 export default async function Index() {
   const { isEnabled } = await draftMode();
+
   const author: ContentfulAuthor = await getAuthorById(process.env.CONTENTFUL_ENTITY_ID as string, isEnabled);
   const feedbacks: Feedback[] = await getFeedbacks();
 
@@ -35,7 +36,7 @@ export default async function Index() {
       <main>
         <Container>
           <Intro 
-            title={author.name} 
+            data={author} 
           />
           <About 
             title={author.jobsCollection.items[0].role} 
