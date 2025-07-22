@@ -23,6 +23,7 @@ const nextConfig = {
     CONTENTFUL_ENTITY_ID: process.env.contentful_entity_id,
     CONTENTFUL_DELIVERY_API_KEY: process.env.contentful_delivery_api,
     CONTENTFUL_PREVIEW_API_KEY: process.env.contentful_preview_api,
+    CONTENTFUL_PREVIEW_SECRET: process.env.contentful_preview_secret,
     RESEND_API_KEY: process.env.resend_api_key,
   }
 }

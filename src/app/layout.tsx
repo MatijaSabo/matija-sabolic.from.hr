@@ -1,8 +1,9 @@
-import { headers } from "next/headers";
+import { draftMode, headers } from "next/headers";
 import { JetBrains_Mono } from "next/font/google";
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
+import { ContentfulPreviewProvider } from "./_components/contentful-preview-provider";
 
 import cn from "classnames";
 import about from "@/dam/data/about.json"
@@ -50,11 +51,13 @@ export async function generateMetadata() {
   }
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { isEnabled } = await draftMode();
+
   return (
     <html lang="en">
       <head>
@@ -95,7 +98,13 @@ export default function RootLayout({
         className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
       >
         <div className="min-h-screen">
-          {children}
+          <ContentfulPreviewProvider
+            locale="en-US"
+            enableInspectorMode={isEnabled}
+            enableLiveUpdates={isEnabled}
+            debug={isEnabled}>
+            {children}
+          </ContentfulPreviewProvider>
         </div>
         <Analytics />
         <SpeedInsights />

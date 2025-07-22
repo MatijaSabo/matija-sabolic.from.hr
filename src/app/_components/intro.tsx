@@ -1,19 +1,24 @@
 'use client';
 
+import { useContentfulInspectorMode, useContentfulLiveUpdates } from '@contentful/live-preview/react';
 import { usePathname } from 'next/navigation';
 
 type Props = {
-    title: string;
+    data: ContentfulAuthor;
 }
 
-export function Intro({ title } : Props) {
+export function Intro({ data } : Props) {
   const pathname = usePathname();
+
+  const livePost = useContentfulLiveUpdates(data);
+  const inspectorProps = useContentfulInspectorMode({ entryId: data.sys.id });
 
   return (
     <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
       <a href="/">
-        <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
-          {title}
+        <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8"
+          {...inspectorProps({ fieldId: 'name' })}>
+          {livePost.name}
         </h1>
       </a>
       { pathname === "/" ? 

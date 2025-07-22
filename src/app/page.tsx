@@ -14,6 +14,7 @@ import { getFeedbacks } from "@/api/feedbacks/api";
 import richTextToHtml, { paragraph_styling } from "@/api/author/richTextToHtml";
 
 import about from "@/dam/data/about.json"
+import { draftMode } from "next/headers";
 
 export async function generateMetadata() {
   return {
@@ -25,7 +26,9 @@ export async function generateMetadata() {
 }
 
 export default async function Index() {
-  const author: ContentfulAuthor = await getAuthorById(process.env.CONTENTFUL_ENTITY_ID as string);
+  const { isEnabled } = await draftMode();
+
+  const author: ContentfulAuthor = await getAuthorById(process.env.CONTENTFUL_ENTITY_ID as string, isEnabled);
   const feedbacks: Feedback[] = await getFeedbacks();
 
   return (
@@ -33,7 +36,7 @@ export default async function Index() {
       <main>
         <Container>
           <Intro 
-            title={author.name} 
+            data={author} 
           />
           <About 
             title={author.jobsCollection.items[0].role} 
