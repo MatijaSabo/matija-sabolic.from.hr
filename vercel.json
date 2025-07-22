@@ -5,8 +5,12 @@
       "source": "/(.*)",
       "headers": [
         {
-          "key": "Content-Security-Policy",
-          "value": "frame-ancestors https://app.contentful.com"
+          "key": "Access-Control-Allow-Origin",
+          "value": "https://app.contentful.com"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "ALLOWALL"
         }
       ]
     }
