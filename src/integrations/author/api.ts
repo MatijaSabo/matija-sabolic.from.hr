@@ -75,7 +75,10 @@ export async function getAuthorById(id: string, preview = false) : Promise<Conte
       `,
       variables: { id },
     }),
-    next: { revalidate: preview ? 0 : Number(process.env.API_REFRESH_PERIOD) },
+    next: { 
+      revalidate: preview ? 0 : Number(process.env.API_REFRESH_PERIOD), 
+      tags: ['author']
+    },
     cache: preview ? 'no-store' : 'force-cache'
   });
 
