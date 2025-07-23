@@ -8,6 +8,8 @@ import Qualifications from "@/components/qualifications";
 import Testimonial from "@/components/testimonial";
 import Footer from "@/components/footer";
 import BackToTop from "@/components/back-to-top";
+import AnimateOnScroll from "@/components/animateOnScroll";
+import { AnimatedText } from "@/components/animated-text";
 
 import { getAuthorById } from "@/api/author/api";
 import { getFeedbacks } from "@/api/feedbacks/api";
@@ -42,22 +44,37 @@ export default async function Index() {
             title={author.jobsCollection.items[0].role} 
             description={await richTextToHtml(author.bio, paragraph_styling)} 
             image={author.picture} />
-          <Skills 
-            items={author.skillsCollection.items}
-          />
-          <Qualifications 
-            education={author.education}
-            certificates={author.certificatesCollection.items}
-          />
-          <Timeline 
-            jobs={author.jobsCollection.items}
-          />
-          <Projects 
-            projects={author.projectsCollection.items}
-          />
-          <Testimonial 
-            feedbacks={feedbacks}
-          />
+          
+          <AnimateOnScroll threshold={0.1}>  
+            <Skills 
+              items={author.skillsCollection.items}
+            />
+          </AnimateOnScroll>
+          
+          <AnimateOnScroll threshold={0.1}>  
+            <Qualifications 
+              education={author.education}
+              certificates={author.certificatesCollection.items}
+            />
+          </AnimateOnScroll>
+          
+          <AnimateOnScroll threshold={0.1}>
+            <Timeline 
+              jobs={author.jobsCollection.items}
+            />
+          </AnimateOnScroll>
+            
+          <AnimateOnScroll threshold={0.1}>
+            <Projects 
+              projects={author.projectsCollection.items}
+            />
+          </AnimateOnScroll>
+
+          <AnimateOnScroll threshold={0.1}>
+            <Testimonial 
+              feedbacks={feedbacks}
+            />
+          </AnimateOnScroll>
         </Container>
       </main>
       <Footer 
