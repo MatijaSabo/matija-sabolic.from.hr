@@ -48,7 +48,7 @@ export default function Testimonial({ feedbacks }: Props) {
                 dotListClass="custom-dot-list-style"
             >
                 {feedbacks.filter((item) => !item.hidden).map((item, key) => {
-                    return <Quote text={item.message} author={item.author || ""} />
+                    return  <Quote text={item.message} author={item.author || ""} />
                 })}
             </Carousel>
         </Section>

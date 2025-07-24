@@ -23,6 +23,7 @@ export default function Skills({ items }: Props) {
           <div className="grid gap-8 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
             {items.map((item, key) => {
                 return <Card
+                    key={key}
                     title={item.area} 
                     description={formatSkills(item.skills)}
                 />
