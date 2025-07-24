@@ -4,6 +4,7 @@ import React, { useEffect, useState, useTransition } from 'react';
 import { useForm } from 'react-hook-form';
 import { Slide, toast, ToastContainer } from 'react-toastify';
 import FullPageSpinner from './full-page-spinner';
+import { motion } from 'motion/react';
 
 export type ContactFormData = {
     name: string;
@@ -169,12 +170,21 @@ export default function ContactForm() {
                                 }></textarea>
                             {errors.message && <span className='text-xs text-red-700 font-bold'>{errors.message.message as string}</span>}
                         </div>
-                        <button 
+                        <motion.button
+                            whileHover={{
+                                scale: 1.05
+                            }}
+                            whileTap={{
+                                scale: 1.05
+                            }}
+                            whileFocus={{
+                                scale: 1.05
+                            }}
                             disabled={isPending}
                             type="submit" 
                             className="bg-stone-700 hover:bg-stone-950 py-3 px-5 text-sm text-white font-medium text-center rounded-lg sm:w-fit hover:shadow-lg">
                                 Send message
-                        </button>
+                        </motion.button>
                     </form>
                 </div>
             </div>

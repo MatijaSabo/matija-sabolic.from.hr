@@ -2,6 +2,7 @@
 
 import { useContentfulInspectorMode, useContentfulLiveUpdates } from '@contentful/live-preview/react';
 import { usePathname } from 'next/navigation';
+import { motion, MotionConfig } from 'motion/react';
 
 type Props = {
     data: ContentfulAuthor;
@@ -21,18 +22,23 @@ export function Intro({ data } : Props) {
           {livePost.name}
         </h1>
       </a>
-      { pathname === "/" ? 
-        <a href="/contact" className="text-xl font-bold hover:underline underline-offset-4">
-          <h2 className="text-2xl mt-6 md:text-4xl font-bold md:pr-8">
-            Contact
-          </h2>
-        </a>
-      : <a href="/" className="text-xl font-bold hover:underline underline-offset-4">
-          <h2 className="text-2xl mt-6 md:text-4xl font-bold md:pr-8">
-            Home
-          </h2>
-        </a>
-      }
+      <motion.a 
+        href={pathname === "/" ? "/contact" : "/"}
+        className="text-xl font-bold hover:underline focus:underline underline-offset-4"
+        whileHover={{
+          scale: 1.05
+        }}
+        whileTap={{
+          scale: 1.05
+        }}
+        whileFocus={{
+          scale: 1.05
+        }}
+      >
+        <h2 className="text-2xl mt-6 md:text-4xl font-bold md:pr-8">
+          {pathname === "/" ? "Contact" : "Home"}
+        </h2>
+      </motion.a>
     </section>
   );
 }

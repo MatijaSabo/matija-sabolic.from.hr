@@ -1,4 +1,7 @@
+'use client'
+
 import Container from "@/components/container";
+import { motion } from "motion/react";
 
 type Props = {
   links: SocialMediaLinks
@@ -14,24 +17,53 @@ export function Footer({ links, email }: Props) {
             Let's get in touch
           </h2>
           <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <a
+            <motion.a
               href={`mailto:${email}`}
-              className="mx-3 font-bold hover:underline underline-offset-4">
+              className="mx-3 font-bold hover:underline focus:underline underline-offset-4"
+              whileHover={{
+                scale: 1.1
+              }}
+              whileTap={{
+                scale: 1.1
+              }}
+              whileFocus={{
+                scale: 1.1
+              }}
+            >
               Email
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href={links.linkedIn}
               target="_blank"
-              className="mx-3 font-bold hover:underline underline-offset-4">
+              className="mx-3 font-bold hover:underline focus:underline underline-offset-4"
+              whileHover={{
+                scale: 1.1
+              }}
+              whileTap={{
+                scale: 1.1
+              }}
+              whileFocus={{
+                scale: 1.1
+              }}
+            >
               LinkedIn
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href={links.gitHub}
               target="_blank"
-              className="mx-3 font-bold hover:underline underline-offset-4"
+              className="mx-3 font-bold hover:underline focus:underline underline-offset-4"
+              whileHover={{
+                scale: 1.1
+              }}
+              whileTap={{
+                scale: 1.1
+              }}
+              whileFocus={{
+                scale: 1.1
+              }}
             >
               GitHub
-            </a>
+            </motion.a>
           </div>
         </div>
         <div className="pb-8 text-xs text-center text-gray-400">

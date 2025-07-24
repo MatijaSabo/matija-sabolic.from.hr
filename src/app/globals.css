@@ -22,12 +22,32 @@
         background-color: var(--orange);
         transition: background-color 250ms linear;
     }
+
+    &:focus {
+        background-color: var(--orange);
+        transition: background-color 250ms linear;
+    }
+
+    &:active {
+        background-color: var(--orange);
+        transition: background-color 250ms linear;
+    }
 }
 
 .button {
     background-color: var(--brown);
 
     &:hover {
+        background-color: var(--orange);
+        transition: background-color 150ms linear;
+    }
+
+    &:focus {
+        background-color: var(--orange);
+        transition: background-color 150ms linear;
+    }
+
+    &:active {
         background-color: var(--orange);
         transition: background-color 150ms linear;
     }
