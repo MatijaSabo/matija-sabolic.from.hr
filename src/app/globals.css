@@ -50,6 +50,16 @@
     z-index: 10000;
 }
 
+.example-button {
+    background-color: var(--orange);
+    color: white;
+    font-size: 1.8rem;
+    border-radius: 0.4rem;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+}
+
 body {
     background-color: var(--beige-light);
 }

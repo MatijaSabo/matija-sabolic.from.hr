@@ -8,8 +8,7 @@ import Qualifications from "@/components/qualifications";
 import Testimonial from "@/components/testimonial";
 import Footer from "@/components/footer";
 import BackToTop from "@/components/back-to-top";
-import AnimateOnScroll from "@/components/animateOnScroll";
-import { AnimatedText } from "@/components/animated-text";
+import FadeIn from "@/components/animateOnScroll";
 
 import { getAuthorById } from "@/api/author/api";
 import { getFeedbacks } from "@/api/feedbacks/api";
@@ -45,36 +44,36 @@ export default async function Index() {
             description={await richTextToHtml(author.bio, paragraph_styling)} 
             image={author.picture} />
           
-          <AnimateOnScroll threshold={0.1}>  
+          <FadeIn>
             <Skills 
               items={author.skillsCollection.items}
             />
-          </AnimateOnScroll>
+          </FadeIn>
           
-          <AnimateOnScroll threshold={0.1}>  
+          <FadeIn>  
             <Qualifications 
               education={author.education}
               certificates={author.certificatesCollection.items}
             />
-          </AnimateOnScroll>
+          </FadeIn>
           
-          <AnimateOnScroll threshold={0.1}>
+          <FadeIn>
             <Timeline 
               jobs={author.jobsCollection.items}
             />
-          </AnimateOnScroll>
+          </FadeIn>
             
-          <AnimateOnScroll threshold={0.1}>
+          <FadeIn>
             <Projects 
               projects={author.projectsCollection.items}
             />
-          </AnimateOnScroll>
+          </FadeIn>
 
-          <AnimateOnScroll threshold={0.1}>
+          <FadeIn>
             <Testimonial 
               feedbacks={feedbacks}
             />
-          </AnimateOnScroll>
+          </FadeIn>
         </Container>
       </main>
       <Footer 
